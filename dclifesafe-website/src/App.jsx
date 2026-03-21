@@ -479,41 +479,40 @@ function WorksheetPage() {
 
 function ContactPage() {
   return (
-    <main className="mx-auto max-w-7xl px-6 py-16">
-      <div className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
-        Contact
-      </div>
-      <h1 className="text-5xl font-bold tracking-tight">
-        Ready to shape the full site?
-      </h1>
-
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-          <div className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
-            Email
-          </div>
-          <p className="mt-4 text-xl font-semibold">info@dclifesafe.com</p>
-          <p className="mt-3 text-base leading-8 text-slate-400">
-            This section can later hold a full contact form, partner inquiry
-            form, or workshop request form.
-          </p>
+   <div className="rounded-[2rem] border border-white/10 bg-slate-900/60 p-6">
+  <div className="rounded-[1.5rem] border border-dashed border-cyan-300/30 bg-[linear-gradient(180deg,#e0f2fe_0%,#eff6ff_26%,#f8fafc_100%)] p-6 text-slate-900">
+    <div className="text-lg font-semibold">Worksheet Preview</div>
+    <div className="mt-5 space-y-5 text-sm">
+      <div>
+        <div className="font-medium text-slate-800">
+          1. Where are you in the wave?
         </div>
-
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-          <div className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
-            Tagline
-          </div>
-          <p className="mt-4 text-xl font-semibold">
-            Medicine beyond the trail
-          </p>
-          <p className="mt-3 text-base leading-8 text-slate-400">
-            Built for trust, readiness, and practical education.
-          </p>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {["Rise", "Peak", "Tube", "Ride Out"].map((s) => (
+            <span
+              key={s}
+              className="rounded-full border border-slate-300 px-3 py-1"
+            >
+              {s}
+            </span>
+          ))}
         </div>
       </div>
-    </main>
-  );
-}
+      <div>
+        <div className="font-medium text-slate-800">
+          2. What are you feeling?
+        </div>
+        <div className="mt-2 h-10 rounded-xl border border-slate-300 bg-white/80" />
+      </div>
+      <div>
+        <div className="font-medium text-slate-800">
+          3. What skill will you use?
+        </div>
+        <div className="mt-2 h-10 rounded-xl border border-slate-300 bg-white/80" />
+      </div>
+    </div>
+  </div>
+</div>
 
 export default function App() {
   const [page, setPage] = useState("home");
